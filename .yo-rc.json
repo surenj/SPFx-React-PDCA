@@ -1,0 +1,19 @@
+{
+  "@microsoft/generator-sharepoint": {
+    "useGulp": false,
+    "plusBeta": false,
+    "isCreatingSolution": true,
+    "nodeVersion": "22.0.0",
+    "sdksVersions": {},
+    "version": "1.23.2",
+    "libraryName": "sf-px-react-pdca",
+    "libraryId": "763a7d36-3f3f-4b59-9a1f-bff5a49f7ae5",
+    "environment": "spo",
+    "packageManager": "npm",
+    "solutionName": "SFPx-React-PDCA",
+    "solutionShortDescription": "SFPx-React-PDCA description",
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "componentType": "webpart"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/config.2.0.schema.json",
+  "version": "2.0",
+  "bundles": {
+    "cx-gate-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/cxGate/CxGateWebPart.js",
+          "manifest": "./src/webparts/cxGate/CxGateWebPart.manifest.json"
+        }
+      ]
+    }
+  },
+  "externals": {},
+  "localizedResources": {
+    "CxGateWebPartStrings": "lib/webparts/cxGate/loc/{locale}.js"
+  }
+}

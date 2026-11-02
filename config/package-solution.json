@@ -1,0 +1,40 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "sf-px-react-pdca-client-side-solution",
+    "id": "763a7d36-3f3f-4b59-9a1f-bff5a49f7ae5",
+    "version": "1.0.0.0",
+    "includeClientSideAssets": true,
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "developer": {
+      "name": "",
+      "websiteUrl": "",
+      "privacyUrl": "",
+      "termsOfUseUrl": "",
+      "mpnId": "Undefined-1.23.2"
+    },
+    "metadata": {
+      "shortDescription": {
+        "default": "SFPx-React-PDCA description"
+      },
+      "longDescription": {
+        "default": "SFPx-React-PDCA description"
+      },
+      "screenshotPaths": [],
+      "videoUrl": "",
+      "categories": []
+    },
+    "features": [
+      {
+        "title": "sf-px-react-pdca Feature",
+        "description": "The feature that activates elements of the sf-px-react-pdca solution.",
+        "id": "a162d627-2467-4411-9a70-71c7c57f4305",
+        "version": "1.0.0.0"
+      }
+    ]
+  },
+  "paths": {
+    "zippedPackage": "solution/sf-px-react-pdca.sppkg"
+  }
+}
