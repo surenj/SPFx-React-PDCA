@@ -11,6 +11,7 @@ import { IReadonlyTheme } from '@microsoft/sp-component-base';
 import * as strings from 'CxGateWebPartStrings';
 import CxGate from './components/CxGate';
 import { ICxGateProps } from './components/ICxGateProps';
+import {initializeIcons} from '@fluentui/react/lib/Icons';
 
 export interface ICxGateWebPartProps {
   description: string;
@@ -36,6 +37,7 @@ export default class CxGateWebPart extends BaseClientSideWebPart<ICxGateWebPartP
   }
 
   protected onInit(): Promise<void> {
+    initializeIcons();
     return this._getEnvironmentMessage().then(message => {
       this._environmentMessage = message;
     });

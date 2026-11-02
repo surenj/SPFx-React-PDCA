@@ -4,7 +4,8 @@ import type { ICxGateProps } from './ICxGateProps';
 import { escape } from '@microsoft/sp-lodash-subset';
 import welcomeDark from '../assets/welcome-dark.png';
 import welcomeLight from '../assets/welcome-light.png';
-import { NavigationBar } from './NavigationBar/NavigationBar';
+import NavBar from './NavBar/NavBar';
+
 
 export default class CxGate extends React.Component<ICxGateProps> {
   public render(): React.ReactElement<ICxGateProps> {
@@ -17,7 +18,7 @@ export default class CxGate extends React.Component<ICxGateProps> {
 
     return (
       <>
-      <NavigationBar/>
+      <NavBar />
       </>
     );
   }

@@ -1,0 +1,74 @@
+.navBarContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #03234d; // Deep navy background matching the design
+  padding: 0 32px;
+  height: 56px;
+  width: 100%;
+  box-sizing: border-box;
+  user-select: none;
+}
+
+.brandContainer {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+
+  .logoImage {
+    height: 28px;
+    width: auto;
+    object-fit: contain;
+  }
+
+  .defaultLogoMark {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .brandTitle {
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 0.3px;
+    font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
+  }
+}
+
+.navLinks {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+.navItem {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 13.5px;
+  font-weight: 500;
+  transition: opacity 0.2s ease, transform 0.1s ease;
+  font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
+
+  &:hover {
+    opacity: 0.85;
+    text-decoration: none;
+  }
+
+  &:active {
+    transform: translateY(1px);
+  }
+
+  .navIcon {
+    font-size: 14px;
+    line-height: 14px;
+  }
+
+  .navLabel {
+    line-height: 1;
+  }
+}
