@@ -1,32 +1,90 @@
+
 import * as React from 'react';
-import styles from './CxGate.module.scss';
+import { HashRouter, Routes, Route, Navigate, useNavigate } from 'react-router-dom';
+
 import type { ICxGateProps } from './ICxGateProps';
-import { escape } from '@microsoft/sp-lodash-subset';
-import welcomeDark from '../assets/welcome-dark.png';
-import welcomeLight from '../assets/welcome-light.png';
+
 import NavBar from './NavBar/NavBar';
 import HeroBanner from './HeroBanner/HeroBanner';
+import GovernanceDashboard from './GovernanceDashboard/GovernanceDashboard';
+
 import teamCollaborateImage from '../assets/teamcollaboration.png';
 
+interface IHomeProps {
+  imageUrl: string;
+}
+
+const Home: React.FC<IHomeProps> = ({ imageUrl }) => {
+  const navigate = useNavigate();
+
+  return (
+    <HeroBanner
+      bgImageUrl={imageUrl}
+      onRegisterProject={() => navigate('/register')}
+      onOpenProject={() => navigate('/governance')}
+    />
+  );
+};
+
+const Dashboard: React.FC = () => {
+  const navigate = useNavigate();
+
+  return (
+    <GovernanceDashboard
+      onHome={() => navigate('/')}
+    />
+  );
+};
+
+const RegisterProjectPage: React.FC = () => {
+  const navigate = useNavigate();
+
+  return (
+    <div>
+      <h2>Register Project</h2>
+
+      <button onClick={() => navigate('/')}>
+        Back to Home
+      </button>
+    </div>
+  );
+};
 
 export default class CxGate extends React.Component<ICxGateProps> {
+
   public render(): React.ReactElement<ICxGateProps> {
-    const {
-      description,
-      isDarkTheme,
-      environmentMessage,
-      userDisplayName
-    } = this.props;
 
     return (
-      <>
-     <NavBar />
-      <HeroBanner
-        bgImageUrl={teamCollaborateImage}
-        onRegisterProject={() => console.log('Register clicked')}
-        onOpenProject={() => console.log('Open clicked')}
-      />
-      </>
+      <HashRouter>
+        <NavBar />
+
+        <Routes>
+
+          <Route
+            path="/"
+            element={
+              <Home imageUrl={teamCollaborateImage} />
+            }
+          />
+
+          <Route
+            path="/governance"
+            element={<Dashboard />}
+          />
+
+          <Route
+            path="/register"
+            element={<RegisterProjectPage />}
+          />
+
+          <Route
+            path="*"
+            element={<Navigate to="/" replace />}
+          />
+
+        </Routes>
+
+      </HashRouter>
     );
   }
 }
