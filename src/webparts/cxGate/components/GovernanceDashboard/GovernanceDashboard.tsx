@@ -7,6 +7,9 @@ import ProjectStatusDistribution
   from '../ProjectStatusDistribution/ProjectStatusDistribution';
 import CurrentStage from '../CurrentStage/CurrentStage';
 import ProjectStageTrend from '../ProjectStageTrend/ProjectStageTrend';
+import ReportingPeriod from '../ReportingPeriod/ReportingPeriod';
+import PortfolioFilters from '../PortfolioFilters/PortfolioFilters';
+import DashboardHeader from '../DashboardHeader/DashboardHeader';
 
 interface IGovernanceDashboardProps {
   onHome: () => void;
@@ -22,7 +25,14 @@ const GovernanceDashboard: React.FC<IGovernanceDashboardProps> = ({
       <button onClick={onHome}>
         Home
       </button>
+      <DashboardHeader
+  onReturnToLiveData={() => {
+    console.log('Return to live project data');
+  }}
+/>
 
+   <ReportingPeriod />
+    <PortfolioFilters />
       <KpiCards />
        <GateJourneyHistory />
        <ProjectStatusDistribution />

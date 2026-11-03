@@ -1,0 +1,79 @@
+
+.filtersContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr auto;
+  align-items: end;
+  gap: 12px;
+  width: 100%;
+  padding: 10px 12px;
+  background: #ffffff;
+  border: 1px solid #d6dee8;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(15, 35, 60, 0.06);
+  box-sizing: border-box;
+}
+
+.filterField {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  min-width: 0;
+
+  label {
+    font-size: 10px;
+    font-weight: 600;
+    color: #52677c;
+  }
+
+  :global(.ms-Dropdown) {
+    width: 100%;
+  }
+
+  :global(.ms-Dropdown-title) {
+    height: 34px;
+    line-height: 32px;
+    border: 1px solid #cbd5e1;
+    border-radius: 7px;
+    font-size: 12px;
+    color: #263b50;
+  }
+
+  :global(.ms-Dropdown-caretDown) {
+    color: #163e67;
+  }
+}
+
+.clearButtonContainer {
+  display: flex;
+  align-items: flex-end;
+}
+
+.clearButton {
+  height: 34px;
+  min-width: 85px;
+  border: 1px solid #cbd5e1;
+  border-radius: 7px;
+  background: #ffffff;
+
+  :global(.ms-Button-label) {
+    font-size: 11px;
+    font-weight: 600;
+    color: #263b50;
+  }
+}
+
+@media (max-width: 800px) {
+  .filtersContainer {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .clearButtonContainer {
+    justify-content: flex-end;
+  }
+}
+
+@media (max-width: 500px) {
+  .filtersContainer {
+    grid-template-columns: 1fr;
+  }
+}

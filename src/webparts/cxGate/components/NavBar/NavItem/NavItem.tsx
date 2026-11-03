@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { Icon } from '@fluentui/react/lib/Icon';
-import styles from '../NavBar.module.scss'
+import styles from '../NavBar.module.scss';
 
 export interface INavItemProps {
   label: string;
@@ -9,24 +9,21 @@ export interface INavItemProps {
   onClick?: () => void;
 }
 
-export const NavItem: React.FC<INavItemProps> = ({ label, iconName, url, onClick }) => {
-  const handleClick = (e: React.MouseEvent<HTMLAnchorElement | HTMLButtonElement>) => {
-    if (onClick) {
-      e.preventDefault();
-      onClick();
-    }
-  };
-
+export const NavItem: React.FC<INavItemProps> = ({
+  label,
+  iconName,
+  onClick
+}) => {
   return (
-    <a
-      href={url || '#'}
+    <button
+      type="button"
       className={styles.navItem}
-      onClick={handleClick}
-      role="button"
-      tabIndex={0}
+      onClick={onClick}
     >
       <Icon iconName={iconName} className={styles.navIcon} />
       <span className={styles.navLabel}>{label}</span>
-    </a>
+    </button>
   );
 };
+
+export default NavItem;
