@@ -1,0 +1,205 @@
+{
+  "metadata": {
+    "title": "CX Gate Governance Dashboard",
+    "mode": "illustrative",
+    "notice": "Illustrative example only: These sample projects and numbers are fictional and are shown only to demonstrate how the dashboard looks when populated. They are not saved to CX Gate and do not change registered projects.",
+    "lastUpdated": "2026-11-03"
+  },
+  "filters": {
+    "regions": [
+      "North",
+      "South",
+      "East",
+      "West"
+    ],
+    "businessAreas": [
+      "Automotive",
+      "Healthcare",
+      "Manufacturing",
+      "Technology"
+    ],
+    "projectTypes": [
+      "New Development",
+      "Enhancement",
+      "Migration",
+      "Maintenance"
+    ]
+  },
+  "reportingPeriods": {
+    "years": [
+      2024,
+      2025,
+      2026
+    ],
+    "defaultShowBy": "Year",
+    "defaultYear": "All years"
+  },
+  "projects": [
+    {
+      "id": "CXG-1001",
+      "name": "Connected Vehicle Experience",
+      "region": "South",
+      "businessArea": "Automotive",
+      "projectType": "New Development",
+      "status": "Planning",
+      "currentStage": "Registration",
+      "isGated": false,
+      "isInAssessment": false,
+      "isSelfCheck": false,
+      "isOnHold": false,
+      "isStopped": false,
+      "registeredDate": "2025-02-12",
+      "gateDate": null
+    },
+    {
+      "id": "CXG-1002",
+      "name": "Dealer Portal Modernisation",
+      "region": "North",
+      "businessArea": "Automotive",
+      "projectType": "Enhancement",
+      "status": "In course",
+      "currentStage": "Customer Impact",
+      "isGated": false,
+      "isInAssessment": true,
+      "isSelfCheck": false,
+      "isOnHold": false,
+      "isStopped": false,
+      "registeredDate": "2025-03-18",
+      "gateDate": null
+    },
+    {
+      "id": "CXG-1003",
+      "name": "Patient Engagement Platform",
+      "region": "East",
+      "businessArea": "Healthcare",
+      "projectType": "New Development",
+      "status": "In course",
+      "currentStage": "Customer Validation",
+      "isGated": false,
+      "isInAssessment": true,
+      "isSelfCheck": false,
+      "isOnHold": false,
+      "isStopped": false,
+      "registeredDate": "2025-05-07",
+      "gateDate": null
+    },
+    {
+      "id": "CXG-1004",
+      "name": "Factory Data Integration",
+      "region": "West",
+      "businessArea": "Manufacturing",
+      "projectType": "Migration",
+      "status": "Gated",
+      "currentStage": "Gated",
+      "isGated": true,
+      "isInAssessment": false,
+      "isSelfCheck": false,
+      "isOnHold": false,
+      "isStopped": false,
+      "registeredDate": "2025-06-21",
+      "gateDate": "2025-10-14"
+    },
+    {
+      "id": "CXG-1005",
+      "name": "Enterprise Reporting Upgrade",
+      "region": "South",
+      "businessArea": "Technology",
+      "projectType": "Enhancement",
+      "status": "On hold",
+      "currentStage": "Assessment - Customer Impact",
+      "isGated": false,
+      "isInAssessment": true,
+      "isSelfCheck": false,
+      "isOnHold": true,
+      "isStopped": false,
+      "registeredDate": "2025-08-02",
+      "gateDate": null
+    },
+    {
+      "id": "CXG-1006",
+      "name": "Legacy CRM Retirement",
+      "region": "North",
+      "businessArea": "Technology",
+      "projectType": "Maintenance",
+      "status": "Stopped",
+      "currentStage": "Customer Impact",
+      "isGated": false,
+      "isInAssessment": false,
+      "isSelfCheck": false,
+      "isOnHold": false,
+      "isStopped": true,
+      "registeredDate": "2025-09-11",
+      "gateDate": null
+    }
+  ],
+  "gateJourney": [
+    {
+      "stage": "Registered",
+      "count": 6
+    },
+    {
+      "stage": "Customer Impact",
+      "count": 4
+    },
+    {
+      "stage": "Customer Validation",
+      "count": 2
+    },
+    {
+      "stage": "Gated",
+      "count": 1
+    }
+  ],
+  "currentStageOrder": [
+    "Registration",
+    "Customer Impact",
+    "Self-Check - Customer Impact",
+    "Assessment - Customer Impact",
+    "Customer Validation",
+    "Self-Check - Customer Validation",
+    "Assessment - Customer Validation",
+    "Gated"
+  ],
+  "projectStageTrend": [
+    {
+      "year": 2025,
+      "stage": "Registration",
+      "count": 1
+    },
+    {
+      "year": 2025,
+      "stage": "Customer Impact",
+      "count": 2
+    },
+    {
+      "year": 2025,
+      "stage": "Customer Validation",
+      "count": 2
+    },
+    {
+      "year": 2025,
+      "stage": "Gated",
+      "count": 1
+    },
+    {
+      "year": 2026,
+      "stage": "Registration",
+      "count": 0
+    },
+    {
+      "year": 2026,
+      "stage": "Customer Impact",
+      "count": 0
+    },
+    {
+      "year": 2026,
+      "stage": "Customer Validation",
+      "count": 0
+    },
+    {
+      "year": 2026,
+      "stage": "Gated",
+      "count": 0
+    }
+  ]
+}
