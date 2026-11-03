@@ -9,6 +9,7 @@ import HeroBanner from './HeroBanner/HeroBanner';
 import GovernanceDashboard from './GovernanceDashboard/GovernanceDashboard';
 
 import teamCollaborateImage from '../assets/teamcollaboration.png';
+import NewProject from './NewProject/NewProject';
 
 interface IHomeProps {
   imageUrl: string;
@@ -72,10 +73,9 @@ export default class CxGate extends React.Component<ICxGateProps> {
             element={<Dashboard />}
           />
 
-          <Route
-            path="/register"
-            element={<RegisterProjectPage />}
-          />
+          <Route path="/register" element={<NewProject onSubmit={(project) => {
+  console.log('New project:', project);
+}}  />} />
 
           <Route
             path="*"

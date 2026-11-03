@@ -30,9 +30,13 @@ export const NavBar: React.FC<INavBarProps> = ({
     }
   };
 
+  const handleLogoClick = (): void => {
+  navigate('/');
+  };  
+
   return (
     <header className={styles.navBarContainer}>
-      <div className={styles.brandContainer}>
+      <div className={styles.brandContainer} onClick={handleLogoClick}>
         {logoUrl ? (
           <img src={logoUrl} alt="Logo" className={styles.logoImage} />
         ) : (
