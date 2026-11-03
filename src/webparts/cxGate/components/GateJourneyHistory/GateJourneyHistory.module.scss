@@ -1,0 +1,139 @@
+
+.journeyCard {
+  background: #ffffff;
+  border: 1px solid #d6dee8;
+  border-radius: 10px;
+  box-shadow: 0 3px 8px rgba(15, 35, 60, 0.10);
+  overflow: hidden;
+  width: 100%;
+}
+
+.journeyHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 16px;
+  border-bottom: 1px solid #d6dee8;
+  background: #f8fafc;
+
+  h3 {
+    margin: 0;
+    font-size: 14px;
+    font-weight: 600;
+    color: #263b50;
+  }
+}
+
+.dateBadge {
+  background: #eaf1ff;
+  color: #284f91;
+  border-radius: 12px;
+  padding: 5px 10px;
+  font-size: 10px;
+  font-weight: 600;
+}
+
+.journeyContent {
+  position: relative;
+  padding: 12px 5% 18px;
+  min-height: 90px;
+}
+
+.journeyTrack {
+  position: absolute;
+  top: 30px;
+  left: 10%;
+  right: 10%;
+  height: 6px;
+  border-radius: 10px;
+  background: linear-gradient(
+    90deg,
+    #a8cce9 0%,
+    #4795c5 35%,
+    #163e67 70%,
+    #55b18e 100%
+  );
+  opacity: 0.9;
+}
+
+.journeyStages {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  z-index: 1;
+}
+
+.journeyStage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.stageCircle {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 17px;
+  font-weight: 700;
+  color: #123b63;
+  border: 2px solid;
+  background: #ffffff;
+}
+
+.registered {
+  background: #f5f9ff;
+  border-color: #b9cfe5;
+}
+
+.customerImpact {
+  background: #42e0ae;
+  border-color: #20b88c;
+}
+
+.customerValidation {
+  background: #7aeba7;
+  border-color: #45c987;
+}
+
+.gated {
+  background: #a4f0bd;
+  border-color: #61c88a;
+}
+
+.stageName {
+  font-size: 10px;
+  font-weight: 600;
+  color: #263b50;
+  margin-top: 5px;
+}
+
+.stagePercentage {
+  font-size: 10px;
+  font-weight: 600;
+  color: #52677c;
+}
+
+@media (max-width: 600px) {
+  .journeyContent {
+    padding-left: 2%;
+    padding-right: 2%;
+  }
+
+  .journeyTrack {
+    left: 12%;
+    right: 12%;
+  }
+
+  .stageName {
+    font-size: 9px;
+  }
+
+  .stageCircle {
+    width: 32px;
+    height: 32px;
+  }
+}

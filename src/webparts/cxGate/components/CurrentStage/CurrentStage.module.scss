@@ -1,0 +1,105 @@
+
+.stageCard {
+  background: #ffffff;
+  border: 1px solid #d6dee8;
+  border-radius: 10px;
+  box-shadow: 0 3px 8px rgba(15, 35, 60, 0.10);
+  overflow: hidden;
+  width: 100%;
+  min-width: 0;
+}
+
+.cardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 16px;
+  border-bottom: 1px solid #d6dee8;
+  background: #f8fafc;
+
+  h3 {
+    margin: 0;
+    font-size: 14px;
+    font-weight: 600;
+    color: #263b50;
+  }
+
+  p {
+    margin: 3px 0 0;
+    font-size: 11px;
+    color: #64748b;
+  }
+}
+
+.journeyBadge {
+  background: #eaf1ff;
+  color: #284f91;
+  border-radius: 12px;
+  padding: 5px 10px;
+  font-size: 10px;
+  font-weight: 600;
+}
+
+.chartContainer {
+  display: grid;
+  grid-template-columns: repeat(8, minmax(0, 1fr));
+  gap: 6px;
+  padding: 22px 12px 24px;
+}
+
+.stageColumn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 0;
+}
+
+.stageCount {
+  height: 20px;
+  font-size: 11px;
+  font-weight: 700;
+  color: #263b50;
+}
+
+.barArea {
+  height: 90px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  background: linear-gradient(
+    to bottom,
+    #ffffff,
+    #f7f9fc
+  );
+  border-bottom: 1px solid #cbd5e1;
+}
+
+.stageBar {
+  width: 32%;
+  max-width: 25px;
+  min-width: 4px;
+  background: linear-gradient(
+    to bottom,
+    #4da6df,
+    #1769aa
+  );
+  border-radius: 4px 4px 0 0;
+  transition: height 0.3s ease;
+}
+
+.stageLabel {
+  margin-top: 7px;
+  font-size: 9px;
+  line-height: 1.4;
+  text-align: center;
+  color: #52677c;
+  overflow-wrap: anywhere;
+}
+
+@media (max-width: 700px) {
+  .chartContainer {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    row-gap: 20px;
+  }
+}
