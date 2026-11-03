@@ -3,7 +3,7 @@
   "solution": {
     "name": "sf-px-react-pdca-client-side-solution",
     "id": "763a7d36-3f3f-4b59-9a1f-bff5a49f7ae5",
-    "version": "1.0.0.0",
+    "version": "1.0.0.1",
     "includeClientSideAssets": true,
     "skipFeatureDeployment": true,
     "isDomainIsolated": false,
